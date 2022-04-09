@@ -14,18 +14,17 @@ export class QuoteslistComponent{
     new Quote( 'run', 'mexcvg sdrgsergsfbsefgsvertgw r54 wtrtwrqt wrtw5tq4 tqrtq4 qt4', 'fun' )
   ]
 
-  addNewQuoteToList ( oneQuote: Quote ) {
+  addNewQuoteToList ( oneQuote: Quote ): void {
     const { person } = oneQuote
     const { quote } = oneQuote
     const { author } = oneQuote
 
     const newQuoteObject: Quote = new Quote(quote, author, person)
     
-    console.log(newQuoteObject)
     this.myQuotes.push(newQuoteObject)
   }
 
-  deleteQuote (i: number) {
+  deleteQuote (i: number): void {
     this.myQuotes.splice(i, 1)
   }
 }

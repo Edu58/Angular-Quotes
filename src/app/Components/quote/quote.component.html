@@ -6,13 +6,5 @@
   </div>
 </div>
 <div *ngIf="receivedQuote.show" class="container">
-  <p class="fst-italic">Author - {{ receivedQuote.author }}</p>
-  <div class="d-flex justify-content-start">
-    <button type="button" class="btn btn-info me-4" (click)="receivedQuote.upVote()">
-      upvote <span class="badge bg-secondary">{{ receivedQuote.upvotes }}</span>
-    </button>
-    <button type="button" class="btn btn-danger" (click)="receivedQuote.downVote()">
-      downvote <span class="badge bg-secondary">{{ receivedQuote.downvotes }}</span>
-    </button>
-  </div>
+  <app-quotedetail []></app-quotedetail>
 </div>
