@@ -4,6 +4,16 @@
       <p class="fs-5 fw-bold"><span class="me-2">{{ i + 1 }}.</span>{{ q.quote }}</p>
       <fa-icon [icon]="expand" (click)="showDetails(i)"></fa-icon>
     </div>
-    <small *ngIf="q.show">{{ q.author }}</small>
+    <div *ngIf="q.show" class="container">
+      <p class="fst-italic">Author - {{ q.quote }}</p>
+      <div class="d-flex justify-content-start">
+        <button type="button" class="btn btn-info me-4">
+          upvotes <span class="badge bg-secondary">4</span>
+        </button>
+        <button type="button" class="btn btn-warning">
+          downvotes <span class="badge bg-secondary">4</span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
