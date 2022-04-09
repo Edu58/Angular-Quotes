@@ -6,5 +6,5 @@
   </div>
 </div>
 <div *ngIf="receivedQuote.show" class="container">
-  <app-quotedetail []></app-quotedetail>
+  <app-quotedetail [sentQuote]="receivedQuote"></app-quotedetail>
 </div>
