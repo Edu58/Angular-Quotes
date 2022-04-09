@@ -1,0 +1,12 @@
+
+
+
+
+<div class="d-flex justify-content-center flex-column align-items-center">
+  <div *ngFor="let q of quotes; let i=index">
+    <p class="fs-4 fw-bold">Quote: {{ q.quote }}</p>
+
+    <p *ngIf="q.show">{{ q.author }}</p>
+    <button class="btn btn-success" (click)="showDetails(i)">Show</button>
+  </div>
+</div>
