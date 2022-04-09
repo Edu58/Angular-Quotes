@@ -24,4 +24,8 @@ export class QuoteslistComponent{
     console.log(newQuoteObject)
     this.myQuotes.push(newQuoteObject)
   }
+
+  deleteQuote (i: number) {
+    this.myQuotes.splice(i, 1)
+  }
 }

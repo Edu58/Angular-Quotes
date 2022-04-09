@@ -2,7 +2,7 @@
   <p class="fs-5 fw-bold"><span class="me-2">{{ indexTracker+1 }}.</span>{{ receivedQuote.quote }}</p>
   <div class="d-flex flex-column">
     <fa-icon [icon]="expand" (click)="showDetails()" class="mb-2"></fa-icon>
-    <fa-icon [icon]="bin"></fa-icon>
+    <fa-icon [icon]="bin" (click)="requestDelete()"></fa-icon>
   </div>
 </div>
 <div *ngIf="receivedQuote.show" class="container">
