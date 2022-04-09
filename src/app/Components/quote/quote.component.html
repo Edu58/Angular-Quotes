@@ -1,19 +1,18 @@
-<div class="container d-flex justify-content-center align-items-center flex-column text-light mt-4">
-  <div *ngFor="let q of quotes; let i=index" class="w-50 mb-3" >
-    <div class="d-flex justify-content-between">
-      <p class="fs-5 fw-bold"><span class="me-2">{{ i + 1 }}.</span>{{ q.quote }}</p>
-      <fa-icon [icon]="expand" (click)="showDetails(i)"></fa-icon>
-    </div>
-    <div *ngIf="q.show" class="container">
-      <p class="fst-italic">Author - {{ q.quote }}</p>
-      <div class="d-flex justify-content-start">
-        <button type="button" class="btn btn-info me-4">
-          upvotes <span class="badge bg-secondary">4</span>
-        </button>
-        <button type="button" class="btn btn-warning">
-          downvotes <span class="badge bg-secondary">4</span>
-        </button>
-      </div>
-    </div>
+<div class="d-flex justify-content-between">
+  <p class="fs-5 fw-bold"><span class="me-2">{{ indexTracker+1 }}.</span>{{ receivedQuote.quote }}</p>
+  <div class="d-flex flex-column">
+    <fa-icon [icon]="expand" (click)="showDetails()" class="mb-2"></fa-icon>
+    <fa-icon [icon]="bin"></fa-icon>
+  </div>
+</div>
+<div *ngIf="receivedQuote.show" class="container">
+  <p class="fst-italic">Author - {{ receivedQuote.quote }}</p>
+  <div class="d-flex justify-content-start">
+    <button type="button" class="btn btn-info me-4" (click)="receivedQuote.upVote()">
+      upvote <span class="badge bg-secondary">{{ receivedQuote.upvotes }}</span>
+    </button>
+    <button type="button" class="btn btn-danger" (click)="receivedQuote.downVote()">
+      downvote <span class="badge bg-secondary">{{ receivedQuote.downvotes }}</span>
+    </button>
   </div>
 </div>

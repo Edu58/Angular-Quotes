@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { QuoteComponent } from './Components/quote/quote.component';
 import { FormComponent } from './Components/form/form.component';
+import { QuoteslistComponent } from './Components/quoteslist/quoteslist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
-    FormComponent
+    FormComponent,
+    QuoteslistComponent
   ],
   imports: [
     BrowserModule,
