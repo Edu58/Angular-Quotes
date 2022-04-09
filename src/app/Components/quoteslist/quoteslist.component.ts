@@ -21,6 +21,7 @@ export class QuoteslistComponent{
 
     const newQuoteObject: Quote = new Quote(quote, author, person)
     
+    console.log(newQuoteObject)
     this.myQuotes.push(newQuoteObject)
   }
 }
