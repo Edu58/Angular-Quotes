@@ -2,7 +2,7 @@
 
     <div class="d-flex justify-content-between w-50">
         <p class="fs-3 text-light fw-bold">Your Quotes</p>
-        <button class="btn btn-sm fs-6 fw-bold btn-warning w-25 h-50 text-light" (click)="toggleForm()">Add</button>
+        <button class="btn btn-sm fs-6 fw-bold btn-warning w-25 h-50 text-light" (click)="toggleForm()">{{ showForm ? 'Close': 'Add' }}</button>
     </div>
 
     <div *ngIf="showForm" class="w-50">
