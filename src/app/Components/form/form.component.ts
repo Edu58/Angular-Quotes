@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
+  showForm: boolean = false
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggleForm () {
+    this.showForm = !this.showForm
   }
 
 }
