@@ -1,9 +1,11 @@
-<p class="fst-italic">Author - {{ sentQuote.author }}</p>
-<div class="d-flex justify-content-start">
-  <button type="button" class="btn btn-info me-4" (click)="sentQuote.upVote()">
-    upvote <span class="badge bg-secondary">{{ sentQuote.upvotes }}</span>
-  </button>
-  <button type="button" class="btn btn-danger" (click)="sentQuote.downVote()">
-    downvote <span class="badge bg-secondary">{{ sentQuote.downvotes }}</span>
-  </button>
+<div class="container">
+    <p class="fst-italic">Author - {{ sentQuote.author }}</p>
+    <div class="d-flex justify-content-start container">
+      <button type="button" class="btn btn-info me-4" (click)="sentQuote.upVote()">
+        upvote <span class="badge bg-secondary">{{ sentQuote.upvotes }}</span>
+      </button>
+      <button type="button" class="btn btn-danger" (click)="sentQuote.downVote()">
+        downvote <span class="badge bg-secondary">{{ sentQuote.downvotes }}</span>
+      </button>
+    </div>
 </div>
