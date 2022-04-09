@@ -1,11 +1,11 @@
 <div class="container d-flex justify-content-center align-items-center flex-column pt-5">
 
-    <div class="d-flex justify-content-between w-50">
+    <div class="d-flex justify-content-between border-bottom w-50" id="form-header">
         <p class="fs-3 text-light fw-bold">Your Quotes</p>
         <button class="btn btn-sm fs-6 fw-bold btn-warning w-25 h-50 text-light" (click)="toggleForm()">{{ showForm ? 'Close': 'Add' }}</button>
     </div>
 
-    <div *ngIf="showForm" class="w-50">
+    <div *ngIf="showForm" class="w-50 pt-2" id="form-div">
         <form #form="ngForm" (ngSubmit)="handleSubmit(form)">
           <div class="mb-3">
             <input type="text" class="form-control" name="person" id="name" placeholder="Your Name" ngModel>

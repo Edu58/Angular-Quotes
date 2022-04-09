@@ -9,9 +9,9 @@ import { Quote } from 'src/app/model/quote.model';
 export class QuoteslistComponent{
 
   myQuotes: Quote[] = [
-    new Quote( 'run', 'mexcvg sdrgsergsfbsefgsvertgw r54 wtrtwrqt wrtw5tq4 tqrtq4 qt4', 'fun' ),
-    new Quote( 'dfd', 'sdasds', 'sdasd' ),
-    new Quote( 'run', 'mexcvg sdrgsergsfbsefgsvertgw r54 wtrtwrqt wrtw5tq4 tqrtq4 qt4', 'fun' )
+    new Quote( 'The purpose of our lives is to be happy.', 'Dalai Lama', 'Ed' ),
+    new Quote( 'Life is what happens when youre busy making other plans.', 'John Lennon', 'Ed' ),
+    new Quote( 'Get busy living or get busy dying.', 'Stephen King', 'Ed' )
   ]
 
   addNewQuoteToList ( oneQuote: Quote ): void {

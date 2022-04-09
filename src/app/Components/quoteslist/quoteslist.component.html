@@ -1,11 +1,12 @@
 <app-form (newQuote)="addNewQuoteToList($event)"></app-form>
 
-<div class="container d-flex justify-content-center align-items-center flex-column text-light mt-4">
-  <div *ngFor="let quote of myQuotes; let i=index" class="w-50 mb-3">
+<div class="container d-flex justify-content-center align-items-center flex-column text-light mt-5">
+  <div *ngFor="let quote of myQuotes; let i=index" class="w-50 mb-3" id="quote-list">
 
       <app-quote 
       [receivedQuote]="quote" 
       [indexTracker]="i"
-      (deleteIndex)="deleteQuote(i)"></app-quote>
+      (deleteIndex)="deleteQuote(i)">
+    </app-quote>
 
   </div>
