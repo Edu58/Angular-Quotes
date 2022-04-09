@@ -6,15 +6,15 @@
     </div>
 
     <div *ngIf="showForm" class="w-50">
-        <form #form="ngForm">
+        <form #form="ngForm" (ngSubmit)="handleSubmit(form)">
           <div class="mb-3">
-            <input type="text" class="form-control" id="name" placeholder="Your Name">
+            <input type="text" class="form-control" name="person" id="name" placeholder="Your Name" ngModel>
           </div>
           <div class="mb-3">
-            <textarea type="text" class="form-control" id="quote" placeholder="Quote" rows="3"></textarea>
+            <textarea type="text" class="form-control" name="quote" id="quote" placeholder="Quote" rows="3" ngModel></textarea>
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" id="author" placeholder="Author">
+            <input type="text" class="form-control" name="author" id="author" placeholder="Author" ngModel>
           </div>
 
           <div class="text-center">

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Quote } from '@angular/compiler';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -6,10 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+
+  @Output() newQuote: EventEmitter<any> = new EventEmitter
+
   showForm: boolean = false
 
-  toggleForm () {
+  toggleForm (): void {
     this.showForm = !this.showForm
+  }
+
+  handleSubmit ( form: any ): void {
+    this.newQuote.emit(form.value)
   }
 
 }
