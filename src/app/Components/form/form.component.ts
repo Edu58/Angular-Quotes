@@ -16,7 +16,10 @@ export class FormComponent {
   }
 
   handleSubmit ( data: any ): void {
-    this.newQuote.emit(data.value)
+    this.newQuote.emit( data.value )
+
+    // reset form
+    data.reset()
   }
 
 }
