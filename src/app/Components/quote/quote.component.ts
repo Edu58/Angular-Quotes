@@ -1,4 +1,3 @@
-import { Quote } from '@angular/compiler';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faMaximize, IconDefinition, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,7 +19,7 @@ export class QuoteComponent {
     this.receivedQuote.show = !this.receivedQuote.show
   }
 
-  requestDelete () {
+  requestDelete (): void {
     this.deleteIndex.emit()
   }
 }

@@ -3,7 +3,7 @@
 <div class="container d-flex justify-content-center align-items-center flex-column text-light mt-5">
   <div *ngFor="let quote of sortedQuotes(); let i=index" class="w-50 mb-3" id="quote-list">
 
-      <app-quote 
+      <app-quote
       [receivedQuote]="quote" 
       [indexTracker]="i"
       (deleteIndex)="deleteQuote(i)">

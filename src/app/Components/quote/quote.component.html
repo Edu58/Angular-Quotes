@@ -1,10 +1,12 @@
-<div class="d-flex justify-content-between">
-  <p class="fs-5 fw-bold"><span class="me-2">{{ indexTracker+1 }}.</span>{{ receivedQuote.quote }}</p>
-  <div class="d-flex flex-column ms-1">
-    <fa-icon [icon]="expand" (click)="showDetails()" class="mb-2"></fa-icon>
-    <fa-icon [icon]="bin" (click)="requestDelete()"></fa-icon>
+<div class="rounded">
+  <div class="d-flex justify-content-between">
+    <p class="fs-5 fw-bold"><span class="me-2">{{ indexTracker+1 }}.</span>{{ receivedQuote.quote }}</p>
+    <div class="d-flex flex-column ms-1">
+      <fa-icon [icon]="expand" (click)="showDetails()" class="mb-2"></fa-icon>
+      <fa-icon [icon]="bin" (click)="requestDelete()"></fa-icon>
+    </div>
   </div>
-</div>
-<div *ngIf="receivedQuote.show" class="container">
-  <app-quotedetail [sentQuote]="receivedQuote"></app-quotedetail>
+  <div *ngIf="receivedQuote.show" class="container">
+    <app-quotedetail [sentQuote]="receivedQuote"></app-quotedetail>
+  </div>
 </div>
