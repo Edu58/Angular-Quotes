@@ -9,7 +9,7 @@ import { Quote } from 'src/app/model/quote.model';
 export class QuoteslistComponent{
 
   myQuotes: Quote[] = [
-    new Quote( 'The purpose of our lives is to be happy.', 'Dalai Lama', 'Ed' ),
+    new Quote( 'The purpose of our lives is to be happy.', 'Dalai Lama', 'Ed', new Date(2021, 11, 24, 10, 33, 30, 0) ),
     new Quote( 'Life is what happens when youre busy making other plans.', 'John Lennon', 'Ed' ),
     new Quote( 'Get busy living or get busy dying.', 'Stephen King', 'Ed' )
   ]

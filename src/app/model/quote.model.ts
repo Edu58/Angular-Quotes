@@ -7,7 +7,7 @@ export class Quote {
     upvotes: number
     downvotes: number
 
-    constructor (quote: string, author: string, person: string, upVotes?: number, downVotes?: number, date: Date = new Date((new Date()).getTime()), show: boolean = false) {
+    constructor (quote: string, author: string, person: string,date: Date = new Date((new Date()).getTime()), upVotes?: number, downVotes?: number, show: boolean = false) {
         this.quote = quote
         this.author = author
         this.person = person
