@@ -86,7 +86,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Licence
 
-Copyright (c) Edwin Karmi 2022 - [MIT Licence](LICENSE)
+Copyright (c) Edwin Karimi 2022 - [MIT Licence](LICENSE)
 
 ## Author Info
 
