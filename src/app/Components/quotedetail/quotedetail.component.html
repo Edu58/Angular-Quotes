@@ -1,6 +1,9 @@
 <div class="container">
-    <p class="fst-italic">Author - {{ sentQuote.author }}</p>
-    <div class="d-flex justify-content-start container">
+    <div class="container d-flex justify-content-between">
+      <p class="fst-italic">Author - {{ sentQuote.author }}</p>
+      <small class="fst-italic">{{ sentQuote.date | date }}</small>
+    </div>
+    <div class="d-flex justify-content-start container mt-1">
       <button type="button" class="btn btn-info me-4" (click)="sentQuote.upVote()">
         upvote <span class="badge bg-secondary">{{ sentQuote.upvotes }}</span>
       </button>

@@ -10,24 +10,28 @@
     <form #form="ngForm" (ngSubmit)="handleSubmit(form)">
       <div class="mb-1">
         <input type="text" class="form-control mb-1" name="person" id="name" placeholder="Your Name" required #fname='ngModel' ngModel>
+
         <div *ngIf="fname.invalid" class="alert alert-danger" role="alert">
             This field is required
         </div>
+
       </div>
       <div class="mb-1">
-        <textarea type="text" class="form-control mb-1" name="quote" required id="quote" placeholder="Quote" rows="3"
-        #fquote='ngModel' ngModel>
+        <textarea type="text" class="form-control mb-1" name="quote" required id="quote" placeholder="Quote" rows="3" #fquote='ngModel' ngModel>
         </textarea>
+
         <div *ngIf="fquote.invalid" class="alert alert-danger" role="alert">
           This field is required
         </div>
+
       </div>
       <div class="mb-1">
-        <input type="text" class="form-control mb-1" name="author" id="author" placeholder="Author" required
-          #fauthor="ngModel" ngModel>
+        <input type="text" class="form-control mb-1" name="author" id="author" placeholder="Author" required #fauthor="ngModel" ngModel>
+
         <div *ngIf="fauthor.invalid" class="alert alert-danger" role="alert">
           This field is required
         </div>
+
       </div>
 
       <div class="text-center">

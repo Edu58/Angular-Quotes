@@ -15,8 +15,8 @@ export class FormComponent {
     this.showForm = !this.showForm
   }
 
-  handleSubmit ( form: any ): void {
-    this.newQuote.emit(form.value)
+  handleSubmit ( data: any ): void {
+    this.newQuote.emit(data.value)
   }
 
 }
